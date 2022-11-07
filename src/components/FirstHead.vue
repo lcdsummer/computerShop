@@ -1,28 +1,21 @@
 <template>
-  <div class="hello">
-    <div class="head-left" @click="handle">
+  <div class="fhead">
+    <div class="head-left" @click="handle" style="color: #707070">
     返回登录
-    </div>
-    <div class="left">
-      <div class="left1" @click="back">
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'FirstHead',
   props: {
     msg: String
   },
   methods:{
     handle(){
-    //  alert("即将跳转到登录页面")
-      this.$router.push('../login');
-    },
-    back() {
-      this.$router.push('../views/modifyFile')
+      alert("即将跳转到登录页面")
+      this.$router.push('/login');
     }
   }
 }
@@ -30,7 +23,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello{
+.fhead{
   height: 50px;
   width: 375px;
   position: relative;
@@ -43,5 +36,18 @@ export default {
   font-size: 15px;
   text-align: center;
 }
-
+/*h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}*/
 </style>
